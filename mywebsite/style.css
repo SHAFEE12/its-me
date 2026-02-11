@@ -1,0 +1,115 @@
+body {
+      background-color: rgb(39, 39, 38);
+
+}
+nav{
+   
+    height:30px;
+       display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+     
+        /* margin-top : 0;
+        border:2px solid black;
+        border-radius: 8px;   */
+
+        background: rgba(255, 255, 255, 0.15);
+    
+    /* 2. The key 'frosted glass' blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    /* 3. Aesthetic enhancements */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: white;
+ 
+      }
+      nav a {
+    color: white;
+    text-decoration: none;
+}
+
+   
+@media (max-width: 600px) {
+    nav {
+      display:flex;
+      /* justify-content: space-between; */
+         /* stack items */
+        align-items: center;
+        padding: 12px 15px;       /* reduce padding */
+        gap: 10px;                
+    }
+}
+h1{
+
+    color: white;          /* text color */
+    font-size: 100px;       /* size */
+    font-weight: bold;     /* thickness */
+
+    margin-top: 15px; 
+        padding-bottom : 150px;
+}
+
+      
+ main {
+     margin-top :10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+ 
+
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    /* 3. Aesthetic enhancements */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+@media (max-width: 600px) {
+  h1{   
+    font-size: 60px;  
+
+}
+   
+   main section {
+        width: 100%;
+    }
+    main {
+       
+      display:flex;
+      
+        padding: 12px 15px;     
+        gap: 10px;      
+         flex-direction: column;   
+        align-items: center;   
+
+    }
+    .video{
+      width:350px;
+    }
+  }
+
+.video{
+   backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    /* 3. Aesthetic enhancements */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+    color: white;
+   
+}
+
