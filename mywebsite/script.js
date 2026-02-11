@@ -1,15 +1,8 @@
-
-const video = document.getElementById("myVideo");
-
-function enableSound() {
+document.addEventListener("pointerdown", () => {
+    const video = document.getElementById("myVideo");
     video.muted = false;
     video.play();
+}, { once: true });
 
-  
-    document.body.removeEventListener("click", enableSound);
-    document.body.removeEventListener("touchstart", enableSound);
-}
 
-document.body.addEventListener("click", enableSound);
-document.body.addEventListener("touchstart", enableSound);
 
