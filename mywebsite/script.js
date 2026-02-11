@@ -1,8 +1,18 @@
-document.addEventListener("pointerdown", () => {
+document.addEventListener("DOMContentLoaded", () => {
+
     const video = document.getElementById("myVideo");
-    video.muted = false;
-    video.play();
-}, { once: true });
+
+    function enableSound() {
+        video.muted = false;
+        video.play();
+    }
+
+    document.addEventListener("click", enableSound, { once: true });
+    document.addEventListener("touchstart", enableSound, { once: true });
+
+});
+
+
 
 
 
