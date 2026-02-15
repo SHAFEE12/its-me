@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const openCamBtn = document.getElementById("openCam");
     const cameraVideo = document.getElementById("camera");
     const questionText = document.getElementById("question");
+    const seeText = document.getElementById("see");
         const bgVideo = document.getElementById("myVideo");
 
     openCamBtn.addEventListener("click", async function () {
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
        
             setTimeout(() => {
-                questionText.innerText = "See? Chand bhi sharma jaaye 😍💖";
+                seeText.innerText = "See? Chand bhi sharma jaaye 😍💖";
             }, 2000);
 
         } catch (error) {
@@ -141,7 +142,3 @@ setTimeout(() => {
     }, 12000);
 
 });
-
-
-
-
