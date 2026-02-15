@@ -100,11 +100,12 @@ h4{
 }
 @media (max-width: 600px) {
   h1{   
-    font-size: 40px;  
+    font-size: 30px;  
 
 }
 p{
   font-size:30px;
+ color: #97A87A;
 }
    
    main section {
@@ -186,7 +187,10 @@ p{
     width: 250px;
     margin-top: 20px;
     border-radius: 10px;
+
+    transform: scaleX(-1);
 }
+
 
 
 
@@ -255,7 +259,7 @@ p{
 
 
 .btn {
- 
+ color:#1B2430;
     font-size: 22px;
     padding: 8px 18px;
     border-radius: 10px;
@@ -272,6 +276,7 @@ p{
     /* align-items: center; */
     gap: 50px;           
     margin: 20px 10px;   
+  
 }
 .btn:hover {
     transform: scale(1.1);
