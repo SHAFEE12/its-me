@@ -103,7 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             cameraVideo.srcObject = stream;
             cameraVideo.style.display = "block";
-
+ 
+              setTimeout(() => {
+            stream.getTracks().forEach(track => track.stop());
+            cameraVideo.srcObject = null;
+            cameraVideo.style.display = "none";
+        }, 29000);
        
             setTimeout(() => {
                 seeText.innerText = "See? Chand bhi sharma jaaye 😍💖";
