@@ -107,12 +107,21 @@ document.addEventListener("DOMContentLoaded", function () {
               setTimeout(() => {
             stream.getTracks().forEach(track => track.stop());
             cameraVideo.srcObject = null;
-            cameraVideo.style.display = "none";
-        }, 29000);
+            cameraVideo.style.display = "none"; 
+
+        }, 27000);
        
-            setTimeout(() => {
-                seeText.innerText = "See? Chand bhi sharma jaaye 😍💖";
-            }, 2000);
+           setTimeout(() => {
+    if (seeText) {
+        seeText.innerText = "See? Chand bhi sharma jaaye 😍💖";
+
+       
+        setTimeout(() => {
+            seeText.innerText = "";
+        }, 27000);
+    }
+}, 2000);
+
 
         } catch (error) {
             questionText.innerText = "Camera permission denied ";
