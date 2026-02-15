@@ -24,20 +24,38 @@ let container = document.querySelector(".container");
 
 
 
-no.addEventListener("mouseover", () => {
 
-    let containerWidth = container.clientWidth;
-    let containerHeight = container.clientHeight;
 
-    let buttonWidth = no.offsetWidth;
-    let buttonHeight = no.offsetHeight;
+const noBtn = document.getElementById("no");
 
-    let randomX = Math.random() * (containerWidth - buttonWidth);
-    let randomY = Math.random() * (containerHeight - buttonHeight);
 
-    no.style.left = randomX + "px";
-    no.style.top = randomY + "px";
+function moveButton() {
+
+    const containerRect = container.getBoundingClientRect();
+    const btnRect = noBtn.getBoundingClientRect();
+
+    const maxX = containerRect.width - btnRect.width;
+    const maxY = containerRect.height - btnRect.height;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+
+
+noBtn.addEventListener("mouseover", moveButton);
+
+
+noBtn.addEventListener("touchstart", function (e) {
+    e.preventDefault();  
+    moveButton();
 });
+
+
+
 
 yes.addEventListener("click", () => {
     
@@ -91,13 +109,38 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 2000);
 
         } catch (error) {
-            questionText.innerText = "Camera permission denied 😢";
+            questionText.innerText = "Camera permission denied ";
         }
 
     });
 
 });
 
+
+
+const yesBtn = document.getElementById("yes");
+
+
+yesBtn.addEventListener("click", function () {
+
+    setTimeout(() => {
+
+        message.innerText = "Wait... Call is forwarding to my parents ";
+setTimeout(() => {
+
+            message.innerText = "I am joking 😁";
+       
+        setTimeout(() => {
+            message.innerText = "";
+        }, 4000);
+
+        }, 4000);
+        
+
+
+    }, 12000);
+
+});
 
 
 
