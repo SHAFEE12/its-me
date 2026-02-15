@@ -183,13 +183,18 @@ p{
 
 
 #camera {
-    display: none;
-    width: 250px;
-    margin-top: 20px;
-    border-radius: 10px;
+  
+
 
     transform: scaleX(-1);
+  
+    display: block;       
+    margin: 20px auto;     
+    width: 250px;
+    border-radius: 10px;
 }
+
+
 
 
 
